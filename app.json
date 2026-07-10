@@ -1,29 +1,44 @@
 {
   "expo": {
-    "name": "profile-card",
-    "slug": "profile-card",
+    "name": "ProfileCard",
+    "slug": "profilecard",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "newArchEnabled": true,
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
+    "userInterfaceStyle": "automatic",
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourname.profilecard",
+      "infoPlist": {
+        "NSCameraUsageDescription": "ProfileCard butuh akses kamera untuk mengambil foto profil kamu.",
+        "NSPhotoLibraryUsageDescription": "ProfileCard butuh akses galeri untuk memilih foto profil dari koleksi kamu.",
+        "NSLocationWhenInUseUsageDescription": "ProfileCard butuh akses lokasi untuk menampilkan lokasi kamu saat ini."
+      }
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "edgeToEdgeEnabled": true
+      "package": "com.yourname.profilecard",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ]
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "ProfileCard butuh akses galeri untuk memilih foto profil.",
+          "cameraPermission": "ProfileCard butuh akses kamera untuk mengambil foto profil."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "ProfileCard butuh akses lokasi untuk menampilkan lokasi kamu saat ini."
+        }
+      ]
+    ]
   }
 }
