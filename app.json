@@ -4,41 +4,61 @@
     "slug": "profilecard",
     "version": "1.0.0",
     "orientation": "portrait",
-    "userInterfaceStyle": "automatic",
-    "assetBundlePatterns": ["**/*"],
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#00b894"
+    },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.yourname.profilecard",
+      "bundleIdentifier": "com.Jerry.profilecard",
       "infoPlist": {
-        "NSCameraUsageDescription": "ProfileCard butuh akses kamera untuk mengambil foto profil kamu.",
-        "NSPhotoLibraryUsageDescription": "ProfileCard butuh akses galeri untuk memilih foto profil dari koleksi kamu.",
-        "NSLocationWhenInUseUsageDescription": "ProfileCard butuh akses lokasi untuk menampilkan lokasi kamu saat ini."
+        "NSCameraUsageDescription": "Aplikasi memerlukan akses kamera untuk mengambil foto profil.",
+        "NSPhotoLibraryUsageDescription": "Aplikasi memerlukan akses galeri untuk memilih foto profil.",
+        "NSLocationWhenInUseUsageDescription": "Aplikasi memerlukan akses lokasi untuk menampilkan tempat Anda."
       }
     },
     "android": {
-      "package": "com.yourname.profilecard",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#00b894"
+      },
+      "package": "com.namaku.profilecard",
+      "versionCode": 1,
       "permissions": [
-        "CAMERA",
-        "READ_EXTERNAL_STORAGE",
-        "WRITE_EXTERNAL_STORAGE",
-        "ACCESS_FINE_LOCATION",
-        "ACCESS_COARSE_LOCATION"
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.RECORD_AUDIO"
       ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
     },
     "plugins": [
       [
         "expo-image-picker",
         {
-          "photosPermission": "ProfileCard butuh akses galeri untuk memilih foto profil.",
-          "cameraPermission": "ProfileCard butuh akses kamera untuk mengambil foto profil."
+          "photosPermission": "Aplikasi memerlukan akses galeri untuk memilih foto profil.",
+          "cameraPermission": "Aplikasi memerlukan akses kamera untuk mengambil foto profil."
         }
       ],
       [
         "expo-location",
         {
-          "locationWhenInUsePermission": "ProfileCard butuh akses lokasi untuk menampilkan lokasi kamu saat ini."
+          "locationWhenInUsePermission": "Aplikasi memerlukan akses lokasi untuk menampilkan tempat Anda."
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "60b42f78-2d5c-47c4-a1ab-3e9ba9cc7281"
+      }
+    },
+    "owner": "jerryhutabarat"
   }
 }
