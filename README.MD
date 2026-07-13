@@ -33,7 +33,7 @@ ProfileCard adalah aplikasi kartu profil sederhana berbasis React Native (Expo) 
 
 ## 📦 Download APK
 
-📲 **[Download APK dari EAS Dashboard](https://expo.dev/accounts/jerryhutabarat/projects/profilecard/builds/90b3ff63-f92f-459e-bc9e-8f255dc7b858)**
+📲 **[Download APK dari EAS Dashboard](https://expo.dev/accounts/jerryhutabarat/projects/profilecard/builds/90b3ff63-f92f-459e-bc9e-8f255dc7b858) atau link Download by Handphone (https://expo.dev/accounts/jerryhutabarat/projects/profilecard/builds/90b3ff63-f92f-459e-bc9e-8f255dc7b858)
 
 > Ganti link di atas dengan link build kamu dari EAS dashboard klik tombol **Install** atau **Download build** pada halaman build
 
